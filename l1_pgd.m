@@ -1,8 +1,8 @@
 function [x1, out1] = l1_pgd(x0, A, b, mu, opts1)
 %l1_pgd - Projected Gradient Descent
-% opts1: [tol hor]
-% tol  - Tolerance
-% hor  - Horizon
+% opts1: [tol k]
+% tol  - Tolerance (default = 1e-4)
+% k    - Max number of iterations (default = 300)
 % Step size rule: BB
 n = size(A);
 m = n(1);
@@ -19,9 +19,9 @@ else
     tol = 1e-4;
 end
 if l >= 2
-    hor = opts1(2);
+    k = opts1(2);
 else
-    hor = 300;
+    k = 300;
 end
 
 iter_num = 0;
@@ -35,10 +35,6 @@ while 1==1
     df_dxm = d2-d1;
     g2 = g1;
     g1 = [df_dxp;df_dxm];
-    dnorm = max(norm(df_dxp),norm(df_dxm));
-    if dnorm < tol
-        break
-    end
     if iter_num==0
         lr = 0.0005;
     else
@@ -51,11 +47,11 @@ while 1==1
     
     xp = xp-lr*df_dxp;
     xm = xm-lr*df_dxm;
-    xp = max([xp zeros(n)],[],2);
-    xm = max([xm zeros(n)],[],2);
+    xp(xp<0) = 0;
+    xm(xm<0) = 0;
     x2 = x1;
     x1 = [xp;xm];
-    if iter_num>=hor
+    if iter_num>=k
         break
     end
     xl = xt;

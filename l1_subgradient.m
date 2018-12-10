@@ -1,7 +1,7 @@
 function [x1, out1] = l1_subgradient(x0, A, b, mu, opts1)
 %l1_subgradient - Subgradient method with k iterations
 % opts1: [k]
-% k - Number of iterations (default = 100)
+% k - Number of iterations (default = 1000)
 % Step size rule: Fixed length
 n = size(A);
 m = n(1);
@@ -46,6 +46,4 @@ out1 = ostar;
 x1 = xstar;
 fprintf('Subgradient method complete.\n');
 fprintf('Optimal value: %.4f\n\n', out1);
-
-
 end

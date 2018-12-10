@@ -2,6 +2,7 @@ function [x1, out1] = l1_cvx_gurobi(x0, A, b, mu, opts1)
 %l1_cvx_gurobi - Calling gurobi with cvx
 n = size(A);
 n = n(2);
+cvx_clear
 cvx_solver gurobi
 cvx_begin 
     variable x(n)

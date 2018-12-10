@@ -1,0 +1,302 @@
+Calling Mosek 8.0.0.60: 2562 variables, 513 equality constraints
+------------------------------------------------------------
+
+MOSEK Version 8.1.0.67 (Build date: 2018-10-31 07:52:37)
+Copyright (c) MOSEK ApS, Denmark. WWW: mosek.com
+Platform: MACOSX/64-X86
+
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 513             
+  Cones                  : 1025            
+  Scalar variables       : 2562            
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator - tries                  : 0                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.01            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.05    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : CONIC (conic optimization problem)
+  Constraints            : 513             
+  Cones                  : 1025            
+  Scalar variables       : 2562            
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 513
+Optimizer  - Cones                  : 1025
+Optimizer  - Scalar variables       : 2562              conic                  : 2562            
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.26              dense det. time        : 0.00            
+Factor     - ML order time          : 0.01              GP order time          : 0.00            
+Factor     - nonzeros before factor : 1.32e+05          after factor           : 1.32e+05        
+Factor     - dense dim.             : 0                 flops                  : 5.83e+08        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   3.7e+00  1.0e+00  1.8e+00  0.00e+00   3.048000000e+00   0.000000000e+00   1.0e+00  0.46  
+1   2.1e-01  5.5e-02  4.2e-01  -7.18e-01  4.203168340e+00   3.691239127e+00   5.5e-02  0.86  
+2   7.3e-02  1.9e-02  1.2e+00  3.16e+00   1.227681482e+00   1.151067411e+00   1.9e-02  0.91  
+3   5.2e-02  1.4e-02  1.2e+00  5.66e+00   3.690022924e-01   3.532928073e-01   1.4e-02  0.97  
+4   2.9e-02  7.7e-03  1.2e+00  3.74e+00   1.464888497e-01   1.430891061e-01   7.7e-03  1.02  
+5   1.4e-02  3.8e-03  9.6e-01  2.10e+00   1.028110415e-01   1.016180703e-01   3.8e-03  1.06  
+6   1.2e-03  3.1e-04  3.6e-01  1.46e+00   8.169157436e-02   8.160827866e-02   3.1e-04  1.11  
+7   5.4e-04  1.4e-04  2.7e-01  1.04e+00   8.078340676e-02   8.074492473e-02   1.4e-04  1.16  
+8   1.4e-05  3.6e-06  8.1e-02  1.02e+00   8.000060564e-02   7.999957993e-02   3.6e-06  1.21  
+9   1.4e-06  3.8e-07  2.6e-02  1.00e+00   7.997943685e-02   7.997933097e-02   3.8e-07  1.27  
+10  1.9e-07  4.9e-08  8.7e-08  1.00e+00   7.997734128e-02   7.997732732e-02   4.9e-08  1.31  
+Optimizer terminated. Time: 1.39    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 7.9977341276e-02    nrm: 3e+01    Viol.  con: 6e-08    var: 0e+00    cones: 0e+00  
+  Dual.    obj: 7.9977327320e-02    nrm: 5e-01    Viol.  con: 0e+00    var: 4e-09    cones: 0e+00  
+Optimizer summary
+  Optimizer                 -                        time: 1.39    
+    Interior-point          - iterations : 10        time: 1.33    
+      Basis identification  -                        time: 0.00    
+        Primal              - iterations : 0         time: 0.00    
+        Dual                - iterations : 0         time: 0.00    
+        Clean primal        - iterations : 0         time: 0.00    
+        Clean dual          - iterations : 0         time: 0.00    
+    Simplex                 -                        time: 0.00    
+      Primal simplex        - iterations : 0         time: 0.00    
+      Dual simplex          - iterations : 0         time: 0.00    
+    Mixed integer           - relaxations: 0         time: 0.00    
+
+------------------------------------------------------------
+Status: Solved
+Optimal value (cvx_optval): +0.0799773
+ 
+ 
+Calling Gurobi 7.52: 2562 variables, 513 equality constraints
+------------------------------------------------------------
+Gurobi optimizer, licensed to CVX for CVX
+Academic license - for non-commercial use only
+Optimize a model with 513 rows, 2562 columns and 524802 nonzeros
+Model has 1025 quadratic constraints
+Coefficient statistics:
+  Matrix range     [5e-06, 5e+00]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e-03, 5e-01]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-02, 3e+01]
+Presolve time: 0.28s
+Presolved: 513 rows, 2562 columns, 524802 nonzeros
+Presolved model has 1025 second-order cone constraints
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.313e+05
+ Factor NZ  : 1.318e+05 (roughly 2 MBytes of memory)
+ Factor Ops : 4.513e+07 (less than 1 second per iteration)
+ Threads    : 2
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   5.94862285e+00  0.00000000e+00  3.59e+00 9.90e-02  1.63e-01     1s
+   1   4.07211791e+00  9.83607719e-03  3.57e-03 1.09e-07  1.59e-03     1s
+   2   4.18090619e-01  3.33768024e-02  3.14e-04 3.49e-11  1.50e-04     1s
+   3   1.79381307e-01  6.42278355e-02  8.60e-05 1.21e-11  4.49e-05     1s
+   4   1.06483254e-01  7.49677261e-02  2.04e-05 7.94e-12  1.23e-05     1s
+   5   8.72374790e-02  7.88575967e-02  5.48e-06 3.27e-11  3.27e-06     1s
+   6   8.12887446e-02  7.96626992e-02  9.89e-07 1.44e-10  6.35e-07     1s
+   7   7.99995480e-02  7.99708931e-02  1.12e-08 5.78e-10  1.12e-08     2s
+   8   7.99812048e-02  7.99758653e-02  1.42e-10 4.47e-09  2.08e-09     2s
+   9   7.99781526e-02  7.99769687e-02  2.69e-11 5.01e-12  4.62e-10     2s
+  10   7.99771936e-02  7.99770138e-02  1.52e-11 1.14e-11  7.02e-11     2s
+  11   7.99770529e-02  7.99770332e-02  4.43e-10 6.37e-11  7.66e-12     2s
+  12   7.99770356e-02  7.99770337e-02  9.69e-10 3.81e-10  7.26e-13     2s
+
+Barrier solved model in 12 iterations and 2.48 seconds
+Optimal objective 7.99770356e-02
+
+Warning: to get QCP duals, please set parameter QCPDual to 1
+
+
+
+------------------------------------------------------------
+Status: Solved
+Optimal value (cvx_optval): +0.079977
+ 
+
+MOSEK Version 8.1.0.67 (Build date: 2018-10-31 07:52:37)
+Copyright (c) MOSEK ApS, Denmark. WWW: mosek.com
+Platform: MACOSX/64-X86
+
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 512             
+  Cones                  : 0               
+  Scalar variables       : 2560            
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer started.
+Quadratic to conic reformulation started.
+Quadratic to conic reformulation terminated. Time: 0.05    
+Presolve started.
+Linear dependency checker started.
+Linear dependency checker terminated.
+Eliminator - tries                  : 0                 time                   : 0.00            
+Lin. dep.  - tries                  : 1                 time                   : 0.01            
+Lin. dep.  - number                 : 0               
+Presolve terminated. Time: 0.27    
+Problem
+  Name                   :                 
+  Objective sense        : min             
+  Type                   : QO (quadratic optimization problem)
+  Constraints            : 512             
+  Cones                  : 0               
+  Scalar variables       : 2560            
+  Matrix variables       : 0               
+  Integer variables      : 0               
+
+Optimizer  - threads                : 4               
+Optimizer  - solved problem         : the primal      
+Optimizer  - Constraints            : 512
+Optimizer  - Cones                  : 1
+Optimizer  - Scalar variables       : 2562              conic                  : 514             
+Optimizer  - Semi-definite variables: 0                 scalarized             : 0               
+Factor     - setup time             : 0.16              dense det. time        : 0.00            
+Factor     - ML order time          : 0.01              GP order time          : 0.00            
+Factor     - nonzeros before factor : 1.31e+05          after factor           : 1.31e+05        
+Factor     - dense dim.             : 0                 flops                  : 3.14e+08        
+ITE PFEAS    DFEAS    GFEAS    PRSTATUS   POBJ              DOBJ              MU       TIME  
+0   3.7e+00  7.1e-01  1.4e+00  0.00e+00   1.415627776e+00   0.000000000e+00   1.0e+00  0.65  
+1   3.9e-01  7.4e-02  4.5e-01  -3.18e-01  5.270138444e+00   4.908415154e+00   1.0e-01  0.76  
+2   1.3e-01  2.5e-02  5.2e-01  3.91e+00   1.139414735e+00   1.117336922e+00   3.5e-02  0.80  
+3   1.0e-01  1.9e-02  6.2e-01  6.60e+00   3.363743214e-01   3.374802664e-01   2.7e-02  0.82  
+4   5.1e-02  9.6e-03  8.2e-01  3.69e+00   1.328963710e-01   1.323958772e-01   1.4e-02  0.86  
+5   2.3e-02  4.4e-03  6.5e-01  1.95e+00   9.698419241e-02   9.680889487e-02   6.2e-03  0.88  
+6   3.4e-03  6.5e-04  6.1e-01  1.36e+00   8.270188331e-02   8.261096792e-02   9.2e-04  0.91  
+7   1.2e-03  2.3e-04  4.3e-01  1.06e+00   8.097545837e-02   8.094184062e-02   3.3e-04  0.94  
+8   1.5e-05  2.8e-06  1.2e-01  1.02e+00   7.999005199e-02   7.998960845e-02   4.0e-06  0.96  
+9   4.8e-07  9.0e-08  2.8e-02  1.00e+00   7.997740108e-02   7.997738684e-02   1.3e-07  1.02  
+Optimizer terminated. Time: 1.21    
+
+
+Interior-point solution summary
+  Problem status  : PRIMAL_AND_DUAL_FEASIBLE
+  Solution status : OPTIMAL
+  Primal.  obj: 7.9977401059e-02    nrm: 3e+01    Viol.  con: 8e-08    var: 0e+00  
+  Dual.    obj: 7.9977383096e-02    nrm: 2e-03    Viol.  con: 0e+00    var: 5e-09  
+Optimizer summary
+  Optimizer                 -                        time: 1.21    
+    Interior-point          - iterations : 9         time: 1.03    
+      Basis identification  -                        time: 0.00    
+        Primal              - iterations : 0         time: 0.00    
+        Dual                - iterations : 0         time: 0.00    
+        Clean primal        - iterations : 0         time: 0.00    
+        Clean dual          - iterations : 0         time: 0.00    
+    Simplex                 -                        time: 0.00    
+      Primal simplex        - iterations : 0         time: 0.00    
+      Dual simplex          - iterations : 0         time: 0.00    
+    Mixed integer           - relaxations: 0         time: 0.00    
+
+Academic license - for non-commercial use only
+Optimize a model with 512 rows, 2560 columns and 1049088 nonzeros
+Model has 512 quadratic objective terms
+Coefficient statistics:
+  Matrix range     [5e-06, 5e+00]
+  Objective range  [1e-03, 1e-03]
+  QObjective range [1e+00, 1e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-02, 3e+01]
+Presolve time: 0.58s
+Presolved: 512 rows, 2560 columns, 1049088 nonzeros
+Presolved model has 512 quadratic objective terms
+Ordering time: 0.00s
+
+Barrier statistics:
+ Free vars  : 512
+ AA' NZ     : 1.308e+05
+ Factor NZ  : 1.313e+05 (roughly 2 MBytes of memory)
+ Factor Ops : 4.487e+07 (less than 1 second per iteration)
+ Threads    : 2
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.04800000e+03 -1.31400525e-14  4.87e-11 2.30e-08  1.00e+06     1s
+   1   2.04799591e+03  3.90450075e-05  8.22e-11 2.30e-11  1.00e+03     1s
+   2   2.04390181e+03  3.91362029e-05  5.97e-11 2.30e-17  9.99e-01     1s
+   3   3.91704007e+00  1.17393165e-04  9.13e-11 2.11e-20  1.91e-03     1s
+   4   2.03436843e-01  3.08190482e-02  1.19e-13 3.39e-21  8.43e-05     1s
+   5   1.25718038e-01  7.03611283e-02  1.13e-13 1.36e-20  2.70e-05     1s
+   6   9.20594546e-02  7.89942354e-02  7.53e-14 1.36e-20  6.38e-06     1s
+   7   8.17336711e-02  7.98713015e-02  3.18e-13 3.04e-18  9.09e-07     1s
+   8   8.04696336e-02  7.99502334e-02  6.70e-13 3.47e-18  2.54e-07     1s
+   9   7.99827705e-02  7.99766114e-02  3.31e-13 3.47e-18  3.01e-09     1s
+  10   7.99780061e-02  7.99769288e-02  6.24e-10 3.04e-18  5.26e-10     2s
+  11   7.99771259e-02  7.99770204e-02  1.19e-09 2.39e-18  5.15e-11     2s
+  12   7.99770388e-02  7.99770329e-02  5.23e-10 2.39e-18  2.86e-12     2s
+
+Barrier solved model in 12 iterations and 1.68 seconds
+Optimal objective 7.99770388e-02
+
+Optimizing with PGD...
+PGD complete.
+Number of iterations: 300
+Optimal value: 0.1622
+
+Optimizing with subgradient method...
+Subgradient method complete.
+Optimal value: 0.1650
+
+Optimizing with smoothed primal: gradient method...
+Smoothed primal: gradient method complete.
+Number of Iterations: 1000.
+Optimal value: 0.2231
+
+Optimizing with smoothed primal: gradient method (decreasing lambda)...
+Smoothed primal: gradient method (decreasing lambda) complete.
+Number of Iterations: 1000.
+Optimal value: 0.1730
+
+Optimizing with smoothed primal: fast gradient method...
+Smoothed primal: fast gradient method complete.
+Number of Iterations: 1000.
+Optimal value: 0.1733
+
+Optimizing with proximal gradient method...
+Proximal gradient method complete.
+Optimal value: 0.1608
+
+Optimizing with FISTA: basic version...
+FISTA: basic version complete.
+Optimal value: 0.1483
+
+Optimizing with FISTA: descent version...
+FISTA: descent version complete.
+Optimal value: 0.1483
+
+Optimizing with Nesterov's 2nd method...
+FISTA: Nesterov's 2nd method complete.
+Optimal value: 0.1487
+
+    cvx-call-gurobi: cpu:  3.38, err-to-cvx-mosek: 1.80e-06
+         call-mosek: cpu:  1.54, err-to-cvx-mosek: 2.11e-06
+        call-gurobi: cpu:  1.78, err-to-cvx-mosek: 1.63e-06
+                PGD: cpu:  0.32, err-to-cvx-mosek: 6.57e-01
+        Subgradient: cpu:  0.49, err-to-cvx-mosek: 6.55e-01
+  Smoothed gradient: cpu:  0.68, err-to-cvx-mosek: 4.83e-03
+Smoothed decreasing: cpu:  0.88, err-to-cvx-mosek: 6.53e-01
+      Fast smoothed: cpu:  0.80, err-to-cvx-mosek: 6.53e-01
+           Proximal: cpu:  3.59, err-to-cvx-mosek: 6.55e-01
+        FISTA-Basic: cpu:  3.36, err-to-cvx-mosek: 6.15e-01
+  FISTA-Descent: cpu:  4.50, err-to-cvx-mosek: 6.15e-01
+   Nesterov 2nd: cpu:  3.73, err-to-cvx-mosek: 6.15e-01
