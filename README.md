@@ -5,6 +5,9 @@ Runtian Zhai (ID: 1600012737)
 ## What is this?
 This repository contains codes for assignments of the course
 Convex Optimization by Professor Wen. 
+You can view the reports online at
+http://www.runtianz.cn/cvx
+
 
 ## How to run the codes?
 For a quick start, simply run Test_l1_regularized_problems.m in the
