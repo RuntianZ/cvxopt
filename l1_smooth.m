@@ -1,7 +1,7 @@
 function [x1, out1] = l1_smooth(x0, A, b, mu, opts1)
 %l1_smooth - Gradient method for smoothed primal
 % opts1: [lambda k]
-% lambda - Parameter of smoothing (default = 10)
+% lambda - Parameter of smoothing (default = 1e-3)
 % k      - Number of iterations (default = 1000)
 % Step size rule: BB
 % Smoother: Huber penalty
@@ -15,7 +15,7 @@ l = length(opts1);
 if l >= 1
     lambda = opts1(1);
 else
-    lambda = 10;
+    lambda = 1e-3;
 end
 if l >= 2
     k = opts1(2);

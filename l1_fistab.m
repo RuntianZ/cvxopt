@@ -1,8 +1,9 @@
 function [x1, out1] = l1_fistab(x0, A, b, mu, opts1)
 %l1_fistab - FISTA: Basic version
-% opts1: [k]
+% opts1: [k r]
 % k - Number of iterations (default = 1000)
-% Step size rule: Fixed step (t = 1/L)
+% r - t = r/L (default = 1)
+% Step size rule: Fixed step (t = r/L)
 n = size(A);
 m = n(1);
 n = n(2);
@@ -16,9 +17,14 @@ if l >= 1
 else
     k = 1000;
 end
+if l >= 2
+    r = opts1(2);
+else
+    r = 1;
+end
 assert(k>1);
 L = norm(A'*A,2);
-t = 1/L;
+t = r/L;
 ostar = inf;
 
 for i = 1:k
