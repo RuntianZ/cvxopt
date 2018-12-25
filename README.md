@@ -27,6 +27,12 @@ A list of methods follows:
 | l1_fistab.m | FISTA: Basic version |
 | l1_fistad.m | FISTA: Descent version |
 | l1_nes2.m | Nesterov's 2nd method |
+| l1_admm.m | ADMM for dual |
+| l1_admmlin.m | ADMM with linearization for primal |
+| l1_momentum.m | Subgradient with momentum |
+| l1_adagrad.m | AdaGrad |
+| l1_rmsprop.m | RMSProp |
+| l1_adam.m | Adam |
 | l1_cvx_mosek.m | Calling mosek from cvx |
 | l1_mosek.m | Calling mosek directly |
 | l1_cvx_gurobi.m | Calling gurobi from cvx |
